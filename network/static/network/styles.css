@@ -403,7 +403,7 @@ svg{
     transition-duration: .2s;
 }
 .post-actions .save:hover{
-    color: #17bf63;
+    color: #3d033e;
     transition-duration: .2s;
 }
 .post-actions .svg-span{
@@ -427,7 +427,7 @@ svg{
     cursor: pointer;
 }
 .post-actions .save:hover .svg-span{
-    color: #17bf63;
+    color: #3d033e;
     background-color: #def2eb;
     box-shadow: 0 0 0 3px #def2eb;
     transition-duration: .2s;
@@ -528,14 +528,14 @@ svg{
 }
 .page-item.active .page-link{
     color: white !important;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #3d033e;
+    border-color: #3d033e;
 }
 .page-link{
-    color: #28a745;
+    color: #3d033e;
 }
 .page-link:hover{
-    color: #218838;
+    color: #3d033e;
 }
 .page-link:focus{
     box-shadow: none !important;
@@ -752,7 +752,7 @@ svg{
     margin: 0px;
 }
 .large-popup textarea:focus hr{
-    color: #28a745;
+    color: #3d033e;
 }
 .large-popup .form-action-btns{
     display: flex;

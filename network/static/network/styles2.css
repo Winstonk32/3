@@ -1,6 +1,6 @@
 .form-control:focus{
     box-shadow: 0 0 0 0.1rem rgba(40,167,69,.25);
-    border-color: rgb(33,136,56);
+    border-color: #3d033e;
 }
 .btn, .btn:focus, .btn:active{
     box-shadow: none !important;
@@ -14,8 +14,8 @@
     width: 95%;
 }
 .btn:hover, .btn:active, .btn:focus{
-    background-color: #218838 !important;
-    border-color: #218838 !important;
+    background-color: #3d033e !important;
+    border-color: #3d033e !important;
 }
 .star{
     color: red;
