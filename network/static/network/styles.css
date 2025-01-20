@@ -1,10 +1,12 @@
 
-.body{
+.body {
     display: flex;
-    min-height: 100%;
-    font-family: system-ui, sans-serif;
-    color: #4B0082;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: rgb(180, 172, 172);
 }
+
 .btn{
     border-radius: 20px;
     padding: 0.32rem 1rem 0.375rem 1rem;
@@ -20,7 +22,7 @@
 .icon-btn {
     background: none;
     border-color: transparent;
-    color: #2c0239;
+    color: #330235;
     line-height: .82em;
     padding: 4px;
     margin: 0px;
@@ -81,7 +83,7 @@ svg{
     width: max-content;
 }
 .sidenav .nav-link > div:hover{
-    color: #17bf63;
+    color: #2c0429;
     background-color: #e7f8ef;
     transition-duration: .2s;
 }
@@ -106,7 +108,7 @@ svg{
     margin-top: auto;
 }
 .active a{
-    color: #28a745 !important;
+    color: #3b0636 !important;
 }
 
 
@@ -133,7 +135,7 @@ svg{
     border-bottom: .5px solid #e6ecf0;
     line-height: .7em;
     font-weight: 800;
-    background-color: #fff;
+    background-color: #ffffff2b;
     z-index: 1000;
 }
 
@@ -309,8 +311,8 @@ svg{
 }
 
 .post{
-    background-color: white;
-    border-top: 1px solid #e6ecf0;
+    background-color: rgb(180, 172, 172);
+    border-top: 1px solid rgb(180, 172, 172);
     padding: 8px 18px 8px 18px;
     font-size: .9em;
     animation-name: hidee;
@@ -530,10 +532,10 @@ svg{
     border-color: #28a745;
 }
 .page-link{
-    color: #3e0334;
+    color: #28a745;
 }
 .page-link:hover{
-    color: #3e0334;
+    color: #218838;
 }
 .page-link:focus{
     box-shadow: none !important;
@@ -750,7 +752,7 @@ svg{
     margin: 0px;
 }
 .large-popup textarea:focus hr{
-    color: #57055f;
+    color: #28a745;
 }
 .large-popup .form-action-btns{
     display: flex;
@@ -815,4 +817,3 @@ svg{
     background: #ccc;
     border-radius: 5px;
 }
-

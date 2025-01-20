@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}Social Network{% endblock %}</title>
+        <title>{% block title %}Reconnectfyp{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="{% static 'network/styles.css' %}" rel="stylesheet">
         <script type="text/javascript" src="{% static 'network/layout.js' %}"></script>
@@ -15,7 +15,7 @@
             <div class="small-popup">
                 <div style="margin-bottom: 10px; font-size: 1.1em;"><strong>Delete Post?</strong></div>
                 <div class="grey" style="font-size: .85em; margin-bottom: 15px;">
-                    This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from Network search results.
+                    This can’t be undone and it will be removed from your profile, the timeline of any accounts that follow you, and from Reconnectfyp search results.
                 </div>
                 <div style="padding: 0px 5%;">
                     <button class="btn btn-light float-left" onclick="remove_popup()">Cancel</button>
@@ -90,7 +90,6 @@
         <div class="body" data-page="{{page}}">
             <div class="sidenav">
                 <a href="{% url 'index' %}" class="navbar-brand">
-                    <img src="{% static 'network/Images/logo.png' %}" height="31px">
                 </a>
                 <div style="height: 100%;">
                     <div>
@@ -218,12 +217,12 @@
                                     <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                                 </svg>
                             </div>
-                            <input type="text" name="query" id="search-box" placeholder="Search Network">
+                            <input type="text" name="query" id="search-box" placeholder="Search Reconnectfyp">
                         </div>
                     </form>
                 </nav>
                 <div class='right-div-content'>
-                    <div class="space" style="background-color: white;"></div>
+                    <div class="space" style="background-color: rgb(180, 172, 172);"></div>
                     {% if user.is_authenticated %}
                         <div class="suggestion-box">
                             <div class="suggestion-header">
@@ -264,7 +263,7 @@
                         <div class="guest-box">
                             <center>
                                 <div class="guest-header">
-                                    <h5>New to Network?</h5>
+                                    <h5>New to Reconnectfyp?</h5>
                                 </div>
                                 <div class="grey guest-content">
                                     Sign up now to get connected with people you know.
