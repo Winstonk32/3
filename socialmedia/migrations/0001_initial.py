@@ -74,7 +74,7 @@ class Migration(migrations.Migration):
                 ('comment_content', models.TextField(max_length=90)),
                 ('comment_time', models.DateTimeField(default=django.utils.timezone.now)),
                 ('commenter', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='commenters', to=settings.AUTH_USER_MODEL)),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='network.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='socialmedia.post')),
             ],
         ),
     ]
