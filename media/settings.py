@@ -27,13 +27,13 @@ SECRET_KEY = 'django-insecure-cs1oc3g3gxry2+h@m-jr%mw94=89y_da2ojc890#5d!@44k@==
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'network',
+    'socialmedia',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,7 +80,7 @@ DATABASES = {
     'default': dj_database_url.parse("postgresql://calorie_7dh8_user:OqZ26cloao3b5OsbaGOsajsItrDMnG6p@dpg-cu1q743tq21c73bk9aig-a.oregon-postgres.render.com/calorie_7dh8")
 }
 
-AUTH_USER_MODEL = "network.User"
+AUTH_USER_MODEL = "socialmedia.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -118,7 +118,7 @@ import os
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'network/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'socialmedia/media')
 MEDIA_URL = '/media/'
 
 # Default primary key field type

@@ -23,7 +23,7 @@ def index(request):
     if request.user.is_authenticated:
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-    return render(request, "network/index.html", {
+    return render(request, "socialmedia/index.html", {
         "posts": posts,
         "suggestions": suggestions,
         "page": "all_posts",
@@ -44,11 +44,11 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "network/login.html", {
+            return render(request, "socialmedia/login.html", {
                 "message": "Invalid username and/or password."
             })
     else:
-        return render(request, "network/login.html")
+        return render(request, "socialmedia/login.html")
 
 
 def logout_view(request):
@@ -71,7 +71,7 @@ def register(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "network/register.html", {
+            return render(request, "socialmedia/register.html", {
                 "message": "Passwords must match."
             })
 
@@ -88,13 +88,13 @@ def register(request):
             user.save()
             Follower.objects.create(user=user)
         except IntegrityError:
-            return render(request, "network/register.html", {
+            return render(request, "socialmedia/register.html", {
                 "message": "Username already taken."
             })
         login(request, user)
         return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "network/register.html")
+        return render(request, "socialmedia/register.html")
 
 
 
@@ -118,7 +118,7 @@ def profile(request, username):
     
     follower_count = Follower.objects.get(user=user).followers.all().count()
     following_count = Follower.objects.filter(followers=user).count()
-    return render(request, 'network/profile.html', {
+    return render(request, 'socialmedia/profile.html', {
         "username": user,
         "posts": posts,
         "posts_count": all_posts.count(),
@@ -140,7 +140,7 @@ def following(request):
         posts = paginator.get_page(page_number)
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-        return render(request, "network/index.html", {
+        return render(request, "socialmedia/index.html", {
             "posts": posts,
             "suggestions": suggestions,
             "page": "following"
@@ -160,7 +160,7 @@ def saved(request):
 
         followings = Follower.objects.filter(followers=request.user).values_list('user', flat=True)
         suggestions = User.objects.exclude(pk__in=followings).exclude(username=request.user.username).order_by("?")[:6]
-        return render(request, "network/index.html", {
+        return render(request, "socialmedia/index.html", {
             "posts": posts,
             "suggestions": suggestions,
             "page": "saved"
